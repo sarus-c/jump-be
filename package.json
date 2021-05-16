@@ -1,0 +1,40 @@
+{
+  "name": "jump-back-end",
+  "version": "1.0.0",
+  "description": "Just jump.BE with Node",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node dist/index.js",
+    "start:dev": "nodemon src/index.ts",
+    "build": "rm -rf dist/ && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarus-c/jump.git"
+  },
+  "keywords": [
+    "jump"
+  ],
+  "author": "Silviu Antohi",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sarus-c/jump/issues"
+  },
+  "homepage": "https://github.com/sarus-c/jump#readme",
+  "engines": {
+    "node": "14.16.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.4.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/mongoose": "^5.10.5",
+    "@types/node": "^15.0.2",
+    "nodemon": "^2.0.7"
+  }
+}
