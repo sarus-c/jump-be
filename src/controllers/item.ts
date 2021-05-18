@@ -5,7 +5,6 @@ import Search from "../models/search";
 
 const createItem = async (req: Request, res: Response) => {
   const items = req.body;
-  let { search_id } = req.params;
 
   try {
     let results: any = [];
@@ -19,13 +18,13 @@ const createItem = async (req: Request, res: Response) => {
           price: x.price,
           url: x.url,
           img: x.img,
-          search_id,
+          search_id: x.search_id,
         });
 
         const result = await item.save();
 
         await Search.updateOne(
-          { _id: search_id },
+          { _id: x.search_id },
           { $push: { items: result._id } }
         ).exec();
 
