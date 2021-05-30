@@ -1,7 +1,0 @@
-applications:
-- name: Jump-BE
-  routes:
-  - route: jumpbe.cert.cfapps.eu10.hana.ondemand.com
-  docker:
-    image: santohi/jumpbe:latest
-    username: santohi
